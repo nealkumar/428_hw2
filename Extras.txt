@@ -1,0 +1,13 @@
+1) I used the whole week + 2 day extension to work on the assignment. While the majority of the assignment was completed
+	by the original due date, I used the extension to work on the "delete" bonus. All-in-all, I spent about 30 hours in total.
+	
+2) The most difficult part of the assignment was doing the JPanel work, and that's where I spent the most time. The networking 
+	part was relatively straightforward, and once functionality was verified that part was okay. My main issue with the JPanel 
+	was not knowing about putting repaint() in the paintComponent() method. I originally thought I had to use an Observer/Observable
+	pattern (where the panel/strategy are observers of the server). Once I realized this wasn't feasible, my next thought was to 
+	somehow add a listener to the Panel.circleList (the master list holding all active circles), because how would JPanel know to 
+	update with a new or removed circle? Turns out, all I needed to do was add in repaint() in paintComponent() since that's called
+	multiple times a second (I believe its 60?). 
+	
+**Side note** as long as the first character of a client message starts with a, and there is some kind of char (non-digit) separation
+between the x and y coordinates, a new Circle should be added, ex: a123i123 places a new Circle at (123, 123). 
